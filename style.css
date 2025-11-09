@@ -112,14 +112,14 @@ h1, h2, h3, p {
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 kolom */
-    gap: 15px;
+    gap: 10px; /* <-- FIX 1: Jarak antar kotak dikecilkan */
     width: 100%;
 }
 
 .menu-item {
     background: #fff;
     border: 4px solid #000;
-    padding: 15px;
+    padding: 10px; /* <-- FIX 2: Bantalan di dalam kotak dikecilkan */
     text-align: center;
     cursor: pointer;
     transition: transform 0.1s ease;
@@ -136,7 +136,7 @@ h1, h2, h3, p {
 /* === INI ADALAH PERBAIKAN UNTUK "PLAYLIST" === */
 .menu-item p {
     font-size: 0.7rem; /* Ukuran font nama menu */
-    white-space: nowrap;   /* FIX: Memaksa teks jadi 1 baris */
+    white-space: nowrap;   /* FIX 3: Memaksa teks jadi 1 baris */
     word-break: normal;  /* Setel ulang properti word-break */
     line-height: 1.4;    /* Kasih jarak baris (jaga-jaga) */
     padding: 0 2px;      /* Kasih padding sedikit */
@@ -194,53 +194,3 @@ h1, h2, h3, p {
 
 /* Ini fotonya (BORDERNYA PINDAH KE ATAS) */
 .gallery-photo {
-    width: 100%;
-    display: block; /* Hapus spasi aneh di bawah gambar */
-    /* Border & radius sekarang ada di .gallery-item */
-}
-
-/* --- INI STYLE BARU UNTUK CAPTION --- */
-.gallery-caption {
-    font-family: 'Press Start 2P', cursive; /* Pakai font pixel */
-    font-size: 0.7rem; /* Ukuran font lebih kecil */
-    color: #333;
-    text-align: center;
-    padding: 12px 10px;
-    border-top: 4px solid #000; /* Garis pemisah antara foto & caption */
-    background: #f0f0f0; /* Background abu-abu muda */
-    line-height: 1.4; /* Jarak antar baris jika captionnya panjang */
-    word-wrap: break-word; /* Biar teksnya nggak keluar kotak */
-}
-
-/* ===== TAMBAHAN: KODE RESPONSIVE UNTUK HP KECIL ===== */
-/* Aturan ini hanya berlaku di layar yang lebarnya 380px atau kurang */
-@media (max-width: 380px) {
-
-    /* 1. Kecilkan font di judul halaman */
-    .title {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-
-    /* 2. Kecilkan font di tombol start */
-    .screen-bottom .pixel-button {
-        font-size: 0.8rem;
-        line-height: 1.4;
-    }
-    
-    /* 3. Kecilkan font di menu item (Letter, Playlist, Gallery) */
-    .menu-item p {
-        font-size: 0.6rem;  /* Kecilkan lagi font-nya */
-        padding: 0;       /* Hapus padding */
-    }
-
-    /* 4. Kecilkan font caption galeri */
-    .gallery-caption {
-        font-size: 0.6rem;
-    }
-
-    /* 5. FIX BARU: Perkecil jarak antar menu biar 'Gallery' nggak kedorong */
-    .menu-grid {
-        gap: 10px; /* Kurangi jarak dari 15px jadi 10px */
-    }
-}
