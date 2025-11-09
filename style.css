@@ -132,9 +132,14 @@ h1, h2, h3, p {
     max-width: 100px;
     margin-bottom: 10px;
 }
+
+/* === INI ADALAH PERBAIKAN UNTUK "PLAYLIST" === */
 .menu-item p {
     font-size: 0.7rem; /* Ukuran font nama menu */
-    word-break: nowrap;
+    white-space: nowrap;   /* FIX: Memaksa teks jadi 1 baris */
+    word-break: normal;  /* Setel ulang properti word-break */
+    line-height: 1.4;    /* Kasih jarak baris (jaga-jaga) */
+    padding: 0 2px;      /* Kasih padding sedikit */
 }
 
 /* Halaman Konten (Surat, Galeri, dll) */
@@ -205,4 +210,37 @@ h1, h2, h3, p {
     background: #f0f0f0; /* Background abu-abu muda */
     line-height: 1.4; /* Jarak antar baris jika captionnya panjang */
     word-wrap: break-word; /* Biar teksnya nggak keluar kotak */
+}
+
+/* ===== TAMBAHAN: KODE RESPONSIVE UNTUK HP KECIL ===== */
+/* Aturan ini hanya berlaku di layar yang lebarnya 380px atau kurang */
+@media (max-width: 380px) {
+
+    /* 1. Kecilkan font di judul halaman */
+    .title {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    /* 2. Kecilkan font di tombol start */
+    .screen-bottom .pixel-button {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    /* 3. Kecilkan font di menu item (Letter, Playlist, Gallery) */
+    .menu-item p {
+        font-size: 0.6rem;  /* Kecilkan lagi font-nya */
+        padding: 0;       /* Hapus padding */
+    }
+
+    /* 4. Kecilkan font caption galeri */
+    .gallery-caption {
+        font-size: 0.6rem;
+    }
+
+    /* 5. FIX BARU: Perkecil jarak antar menu biar 'Gallery' nggak kedorong */
+    .menu-grid {
+        gap: 10px; /* Kurangi jarak dari 15px jadi 10px */
+    }
 }
