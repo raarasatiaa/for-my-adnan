@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Poularice</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="game-container">
+
+        <div id="screen-start" class="screen active">
+            <h1 class="title">Happy Birthday, Love!</h1>
+            <div class="nintendo-ds">
+                <div class="screen-top">
+                    <img src="images/love.gif" alt="pixel hearts">
+                </div>
+                <div class="screen-bottom">
+                    <button class="pixel-button" onclick="showScreen('screen-menu')">
+                        CLICK TO GET YOUR LITTLE GIFT
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="screen-menu" class="screen">
+            <h2 class="title">CLICK YOUR GIFTS</h2>
+            <div class="menu-grid">
+                <div class="menu-item" onclick="showScreen('screen-letter')">
+                    <img src="images/letter.png" alt="Letter">
+                    <p>Letter</p>
+                </div>
+                <div class="menu-item" onclick="showScreen('screen-playlist')">
+                    <img src="images/music.png" alt="Playlist">
+                    <p>Playlist</p>
+                </div>
+                <div class="menu-item" onclick="showScreen('screen-gallery')">
+                    <img src="images/photo.png" alt="Gallery">
+                    <p>Gallery</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="screen-letter" class="screen content-screen">
+            <button class="pixel-button back-button" onclick="showScreen('screen-menu')">
+                &lt; BACK
+            </button>
+            <div class="content-box">
+                <h3>10 Hal tentang kamu yang aku sukaaakk!!</h3>
+                <ol>
+                    <li>Your gentleness</li>
+                    <li>Your storytelling</li>
+                    <li>The way you explain something to me</li>
+                    <li>YOUR VOICEEEE</li>
+                    <li>The way you reassure me</li>
+                    <li>And how you comfort me whenever i feel low</li>
+                    <li>Honestly, aku suka kamu yang mode manja ahshwha my clingy man</li>
+                    <li>ALSO! Ketika kamu tiba tiba kasih pengungkapan sayang</li>
+                    <li>SO I LOVE HOW YOU ALWAYS MAKES ME FEEL LOVEDDD</li>
+                    <li>I love the whole person of you my kakak </li>
+                </ol>
+
+                <hr> <h3>Your Birthday Letter</h3>
+                <p>
+                    My dear Adnan,<br>
+                    Kamu sekarang udah genap 19 tahun, aku yakin akan banyak berdatangan cinta kasih dan keluh kesah di hari-hari yang mendatang. 
+                    Tapi yang harus kamu tau kalau jauh-dekat I'll always be with you till the end of the line because I always feel you whenever I am. <br>
+                    SOo makaci udah kembali dan meyakinkan aku lagi bahwa kasih sayang kamu selalu buat aku. Terimakaci sudah kembali hadir dan memenuhi tangki cinta aku. Terima kasih juga karena selalu berusaha, aku harap kamu selalu memenangkan peperangan yang sedang atau akan kamu hadapi, kalau kamu kalah pun I still be on your side—kita rayakan setiap menang dan kalahnya bersama.<br>
+                    Selamat ulang tahun my Adnan.<br>
+                    With infinity love, your Bocil.
+                </p>
+
+                <hr> <h3>Special Poetry from tulisanara</h3>
+                <p>
+                    Saat semesta terus berputar mengubah rasi,<br>
+                    Ada banyak pendar yang datang dan pergi,<br>
+                    Menawarkan janji yang esoknya sirna.<br>
+                    Namun di sana, di poros utara,<br>
+                    Satu cahaya tak lekang oleh masa.<br>
+                    Bukan yang paling benderang,<br>
+                    Namun yang paling setia.<br>
+                    Tempat keluhku berlabuh menepi,<br>
+                    Tempat segala rancu menemukan arahnya.<br>
+                    Sebab aku yakin, esok pun kamu masih di sana.<br>
+                    Rayakanlah harimu dengan harsa,<br>
+                    Biarkan dunia berotasi mengitarimu.<br>
+                    Karena kamu Polarisnya;<br>
+                    Tetaplah megah, menjadi poros bagi semestaku.<br>
+                </p>
+            </div>
+        </div>
+
+        <div id="screen-playlist" class="screen content-screen">
+            <button class="pixel-button back-button" onclick="showScreen('screen-menu')">
+                &lt; BACK
+            </button>
+            <h2 class="title">Our Songs</h2>
+            
+        <iframe data-testid="embed-iframe" 
+            style="border-radius:12px" 
+            src="https://open.spotify.com/embed/playlist/46SpwEKh9xiUSOQ1kpqjzx?utm_source=generator" 
+            width="100%" 
+            height="352" 
+            frameBorder="0" 
+            allowfullscreen="" 
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+            loading="lazy">
+        </iframe>
+        </div>
+
+
+        <div id="screen-gallery" class="screen content-screen">
+            <button class="pixel-button back-button" onclick="showScreen('screen-menu')">
+                &lt; BACK
+            </button>
+            <h2 class="title">Our Gallery</h2>
+
+            <div class="gallery-grid">
+                
+                <figure class="gallery-item">
+                    <img src="images/poto-baby.jpeg" alt="Kenangan 1" class="gallery-photo">
+                    <figcaption class="gallery-caption">
+                        hihi my babyyyyy
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="images/poto1.jpeg" alt="Kenangan 2" class="gallery-photo">
+                    <figcaption class="gallery-caption">
+                        our first ever photoo<br> (xixixi jauh bangatt)
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                    <img src="images/potobot.jpeg" alt="Kenangan 3" class="gallery-photo">
+                    <figcaption class="gallery-caption">
+                        my favorit pict!
+                    </figcaption>
+                </figure>
+
+            </div>
+        </div>
+
+    </div> </body>
+</html>
