@@ -133,10 +133,8 @@ h1, h2, h3, p {
     margin-bottom: 10px;
 }
 .menu-item p {
-    font-size: 0.7rem; /* Ukuran font nama menu */
+    font-size: 0.5rem; /* Ukuran font nama menu */
     word-break: break-word;
-    line-height: 1.4;
-    padding: 0 5px;
 }
 
 /* Halaman Konten (Surat, Galeri, dll) */
@@ -207,21 +205,4 @@ h1, h2, h3, p {
     background: #f0f0f0; /* Background abu-abu muda */
     line-height: 1.4; /* Jarak antar baris jika captionnya panjang */
     word-wrap: break-word; /* Biar teksnya nggak keluar kotak */
-}
-
-@media (max-width: 380px) {
-
-    .title {
-        font-size: 1rem; /* Sedikit lebih kecil dari 1.2rem */
-        line-height: 1.5; /* Jarak baris jika judulnya panjang */
-    }
-
-    .screen-bottom .pixel-button {
-        font-size: 0.8rem; /* Lebih kecil dari 1rem */
-        line-height: 1.4;
-    }
-    
-    .menu-item p {
-        font-size: 0.6rem;  /* Kecilkan lagi font-nya biar muat */
-    }
 }
